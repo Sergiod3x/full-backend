@@ -161,7 +161,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/sls-appsync-backend/dev/1638265993332-2021-11-30T09:53:13.332Z/sls-appsync-backend.zip"
+          "S3Key": "serverless/sls-appsync-backend/dev/1638267366874-2021-11-30T10:16:06.874Z/sls-appsync-backend.zip"
         },
         "Handler": "handler.graphql",
         "Runtime": "nodejs12.x",
@@ -179,14 +179,14 @@
         "GraphqlLogGroup"
       ]
     },
-    "GraphqlLambdaVersionylPRyqRodghLlGtbQVr8JfCZZgwj5ASrrvi7Bh2U9w": {
+    "GraphqlLambdaVersionlPPgWFKKxTCdrJEY4NxCobo49Vn5DYFHRThbjds": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GraphqlLambdaFunction"
         },
-        "CodeSha256": "rupS+U4qx5JDujx1k2noNvqtwY/lHDT3g+Jn7TQPZaM="
+        "CodeSha256": "L/zsZ1815AwQaBmnM7BbbJEqnaZx1qvLRDd1y96BDTM="
       }
     },
     "CognitoUserPool": {
@@ -416,7 +416,7 @@
     "GraphQlSchema": {
       "Type": "AWS::AppSync::GraphQLSchema",
       "Properties": {
-        "Definition": "type Query {\n  helloWorld(consumer_key: String, consumer_secret: String): String!\n}\n\nschema {\n  query: Query\n}",
+        "Definition": "type Query {\n  helloWorld(consumer_key: String, consumer_secret: String, select_key: String): String!\n}\n\nschema {\n  query: Query\n}",
         "ApiId": {
           "Fn::GetAtt": [
             "GraphQlApi",
@@ -489,7 +489,7 @@
     "GraphqlLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GraphqlLambdaVersionylPRyqRodghLlGtbQVr8JfCZZgwj5ASrrvi7Bh2U9w"
+        "Ref": "GraphqlLambdaVersionlPPgWFKKxTCdrJEY4NxCobo49Vn5DYFHRThbjds"
       },
       "Export": {
         "Name": "sls-sls-appsync-backend-dev-GraphqlLambdaFunctionQualifiedArn"

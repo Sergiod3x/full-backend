@@ -1,5 +1,6 @@
 type Query{
-    helloWorld(consumer_key: String, consumer_secret: String) : String!
+    helloWorld(consumer_key: String, consumer_secret: String, select_key: String) : String!
+
 }
 
 schema {
