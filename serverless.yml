@@ -25,7 +25,7 @@ custom:
     mappingTemplates:
       - dataSource: awsLambdaDataSource
         type: Query #Query, Mutation, Subscription
-        field: helloWorld
+        field: query1
         request: "helloWorld-request-mapping-template.txt"
         response: "helloWorld-response-mapping-template.txt"
     schema: # defaults schema.graphql
