@@ -4,6 +4,8 @@
     "payload": {
         "field": "query1",
         "argumentos":  $utils.toJson($context.arguments),
+        "selectK":  $utils.toJson($context.arguments.select_key),
         "handle" : $utils.toJson($context.identity.username)
+
     }
 }

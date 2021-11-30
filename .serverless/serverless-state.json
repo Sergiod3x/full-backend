@@ -174,7 +174,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/sls-appsync-backend/dev/1638274358700-2021-11-30T12:12:38.700Z/sls-appsync-backend.zip"
+                "S3Key": "serverless/sls-appsync-backend/dev/1638287966366-2021-11-30T15:59:26.366Z/sls-appsync-backend.zip"
               },
               "Handler": "handler.graphql",
               "Runtime": "nodejs12.x",
@@ -192,14 +192,14 @@
               "GraphqlLogGroup"
             ]
           },
-          "GraphqlLambdaVersionRjOz7mi2ThVp4t4D9vaXYG9MsJytpdtztJWUnsHbs": {
+          "GraphqlLambdaVersionWY9tGcfajLoAxPDL3UIWB49HpNPLid79wulz3mkw": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GraphqlLambdaFunction"
               },
-              "CodeSha256": "k/Ho0xIlaaMBmONkR+/87QGH/tdEjutGdsUrTix1Ic0="
+              "CodeSha256": "oact9FzrCYXMljVD21hhNAQ3qnsEqlVmstputkInkBI="
             }
           },
           "CognitoUserPool": {
@@ -478,7 +478,7 @@
               },
               "TypeName": "Query",
               "FieldName": "query1",
-              "RequestMappingTemplate": "{\r\n    \"version\": \"2017-02-28\",\r\n    \"operation\": \"Invoke\",\r\n    \"payload\": {\r\n        \"field\": \"query1\",\r\n        \"argumentos\":  $utils.toJson($context.arguments),\r\n        \"handle\" : $utils.toJson($context.identity.username)\r\n    }\r\n}",
+              "RequestMappingTemplate": "{\r\n    \"version\": \"2017-02-28\",\r\n    \"operation\": \"Invoke\",\r\n    \"payload\": {\r\n        \"field\": \"query1\",\r\n        \"argumentos\":  $utils.toJson($context.arguments),\r\n        \"selectK\":  $utils.toJson($context.arguments.select_key),\r\n        \"handle\" : $utils.toJson($context.identity.username)\r\n\r\n    }\r\n}",
               "ResponseMappingTemplate": "$util.toJson($context.result)",
               "Kind": "UNIT",
               "DataSourceName": {
@@ -502,7 +502,7 @@
           "GraphqlLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GraphqlLambdaVersionRjOz7mi2ThVp4t4D9vaXYG9MsJytpdtztJWUnsHbs"
+              "Ref": "GraphqlLambdaVersionWY9tGcfajLoAxPDL3UIWB49HpNPLid79wulz3mkw"
             },
             "Export": {
               "Name": "sls-sls-appsync-backend-dev-GraphqlLambdaFunctionQualifiedArn"
@@ -673,7 +673,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "GraphqlLambdaVersionRjOz7mi2ThVp4t4D9vaXYG9MsJytpdtztJWUnsHbs"
+        "versionLogicalId": "GraphqlLambdaVersionWY9tGcfajLoAxPDL3UIWB49HpNPLid79wulz3mkw"
       }
     },
     "resources": {
@@ -914,7 +914,7 @@
     "artifact": "D:\\serverless\\full-backend\\.serverless\\sls-appsync-backend.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/sls-appsync-backend/dev/1638274358700-2021-11-30T12:12:38.700Z",
+    "artifactDirectoryName": "serverless/sls-appsync-backend/dev/1638287966366-2021-11-30T15:59:26.366Z",
     "artifact": "sls-appsync-backend.zip"
   }
 }
