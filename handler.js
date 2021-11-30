@@ -9,7 +9,10 @@ exports.graphql = (event, context, callback) => {
 	console.log('Got an Invoke Request.');
 	switch (event.field) {
 		case 'helloWorld': {
-			callback(null, 'Hello world');
+			callback(null, 'Hello world '+ ' Consumer Key: '+consumerKey+ " Consumer Secret: "+ consumerSecret);
+    }
+    case 'helloWorld2': {
+      callback(null, 'Hello world 2 '+ ' Consumer Key: '+consumerKey+ " Consumer Secret: "+ consumerSecret);
 			break;
 		}
 

@@ -6,7 +6,8 @@ plugins:
 
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs12.x
+  lambdaHashingVersion: '20201221'
 
 functions:
   graphql:
@@ -20,7 +21,7 @@ custom:
     userPoolConfig:
       awsRegion:  us-east-1
       defaultAction: ALLOW
-      userPoolId:  us-east-1_kOOtCwBxm
+      userPoolId:  us-east-1_COgdryKJY
     mappingTemplates:
       - dataSource: awsLambdaDataSource
         type: Query #Query, Mutation, Subscription

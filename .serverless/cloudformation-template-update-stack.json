@@ -161,10 +161,10 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/sls-appsync-backend/dev/1638206236977-2021-11-29T17:17:16.977Z/sls-appsync-backend.zip"
+          "S3Key": "serverless/sls-appsync-backend/dev/1638265993332-2021-11-30T09:53:13.332Z/sls-appsync-backend.zip"
         },
         "Handler": "handler.graphql",
-        "Runtime": "nodejs8.10",
+        "Runtime": "nodejs12.x",
         "FunctionName": "sls-appsync-backend-dev-graphql",
         "MemorySize": 1024,
         "Timeout": 6,
@@ -179,14 +179,14 @@
         "GraphqlLogGroup"
       ]
     },
-    "GraphqlLambdaVersionqAdxaQEhVWAWn7YSBXFulY1GVChBVCV9n0b0zz5Mw": {
+    "GraphqlLambdaVersionylPRyqRodghLlGtbQVr8JfCZZgwj5ASrrvi7Bh2U9w": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GraphqlLambdaFunction"
         },
-        "CodeSha256": "1cr9ky2XFsJYGZbtcOL9HldNrwzm8lpIoEYIBJJ4ScY="
+        "CodeSha256": "rupS+U4qx5JDujx1k2noNvqtwY/lHDT3g+Jn7TQPZaM="
       }
     },
     "CognitoUserPool": {
@@ -407,7 +407,7 @@
         "AdditionalAuthenticationProviders": [],
         "UserPoolConfig": {
           "AwsRegion": "us-east-1",
-          "UserPoolId": "us-east-1_kOOtCwBxm",
+          "UserPoolId": "us-east-1_COgdryKJY",
           "DefaultAction": "ALLOW"
         },
         "XrayEnabled": false
@@ -489,7 +489,7 @@
     "GraphqlLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GraphqlLambdaVersionqAdxaQEhVWAWn7YSBXFulY1GVChBVCV9n0b0zz5Mw"
+        "Ref": "GraphqlLambdaVersionylPRyqRodghLlGtbQVr8JfCZZgwj5ASrrvi7Bh2U9w"
       },
       "Export": {
         "Name": "sls-sls-appsync-backend-dev-GraphqlLambdaFunctionQualifiedArn"
